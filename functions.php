@@ -7,6 +7,12 @@
  * @package wp-launching
  */
 
+function debug($array){
+	echo '</pre>';
+	print_r($array);
+	echo '</pre>';
+}
+
 if ( ! function_exists( 'wp_launching_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -120,6 +126,8 @@ add_action( 'widgets_init', 'wp_launching_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wp_launching_scripts() {
+	wp_enqueue_style( 'bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" );
+
 	wp_enqueue_style( 'wp-launching-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wp-launching-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -158,4 +166,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

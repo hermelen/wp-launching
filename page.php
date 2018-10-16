@@ -17,11 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-            <?php if ( is_home() || is_front_page() ) :
-                get_template_part( 'template-parts/content', 'home' );
-            ?>
 
-            <?php endif ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
