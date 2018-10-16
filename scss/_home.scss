@@ -1,6 +1,11 @@
-div#main-front{
+div#main-front {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1000px;
+  color: white;
+  font-weight: bold;
+  div.front-content {
+    position: absolute;
+  }
 }
