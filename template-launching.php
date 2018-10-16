@@ -15,12 +15,18 @@ get_header();
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
           <h1>WE ARE LAUNCHING IN</h1>
-          <h2>5</h2>
-          <h2>DAYS</h2>
-
-          <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
-          <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
-
+          <div>
+            <h2>5</h2>
+            <h2>DAYS</h2>
+          </div>
+          <div>
+            <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
+            <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
+          </div>
+          <div class="button">
+            <button type="button" name="button">toto</button>
+            <button type="button" name="button">toto</button>
+          </div>
           <p>Template Handcrafted By Codi'n Camp</p>
 
         </div>
