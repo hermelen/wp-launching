@@ -7,5 +7,14 @@ div#main-front {
   font-weight: bold;
   div.front-content {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+      text-align: center;
+    }
   }
+}
+body{
+    color:black;
 }
