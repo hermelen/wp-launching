@@ -17,9 +17,9 @@ $page_id = get_the_ID();
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
           <h1><?php	echo get_post_meta($page_id, 'title', true);	?></h1>
-          <div>
-						<?php get_template_part('template-parts/content', 'countdown') ?>
-          </div>
+          <p>
+			  <?php get_template_part('template-parts/content', 'countdown') ?>
+          </p>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
             <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
@@ -29,7 +29,7 @@ $page_id = get_the_ID();
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
               Newsletter
             </button>
-            <a class="btn btn-primary">
+            <a class="btn btn-outline-light">
               About Us
             </a>
 
@@ -44,19 +44,19 @@ $page_id = get_the_ID();
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-									<form action="" method="post">
+				  <form action="" method="post">
                     <div class="modal-body">
-        				  		<p>
-            		  			<label for="zero_newsletter_email">Votre email:</label>
-            		  			<input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
-        				  		</p>
+        			  <p>
+            		    <label for="zero_newsletter_email">Votre email:</label>
+            		    <input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
+        			  </p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary">Send Email</button>
 											<!-- <input class="btn btn-primary" type="submit" name="" value="Send Email"> -->
                     </div>
-								  </form>
+    			  </form>
                 </div>
               </div>
             </div>

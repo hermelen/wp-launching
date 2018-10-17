@@ -10,11 +10,19 @@ div#main-front {
     display: flex;
     flex-direction: column;
     align-items: center;
+    button.btn.btn-primary{
+        background-color: #E91E63;
+        border: #E91E63;
+    }
+    a.btn.btn-outline-light:hover{
+        background-color: #E91E63;
+        border: #E91E63;
+    }
+    #exampleModal{
+        color:black;
+    }
     div {
       text-align: center;
     }
   }
-}
-body{
-    color:black;
 }
