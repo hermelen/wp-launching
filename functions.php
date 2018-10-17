@@ -130,7 +130,7 @@ function wp_launching_scripts() {
 
 	wp_enqueue_style( 'wp-launching-style', get_stylesheet_uri() );
 
-
+    wp_deregister_script('jquery');//pour désactiver le jquery installé avec wordpress(uniquement pour le front)
 
     wp_enqueue_script('jquery',"https://code.jquery.com/jquery-3.3.1.slim.min.js");
 
