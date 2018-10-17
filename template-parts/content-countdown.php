@@ -22,7 +22,7 @@ $display_minutes = ($minutes<2)  ? "Minute": "Minutes";
 $display_seconds = ($seconds<2)  ? "Second": "Seconds";
 ?>
 
-<div class="countdown-container">
+
   <?php if ($days > 0): ?>
   <div class="item">
     <p><?= $days ?></p>
@@ -47,7 +47,6 @@ $display_seconds = ($seconds<2)  ? "Second": "Seconds";
     <p><?= $display_seconds ?></p>
   </div>
   <?php endif ?>
-</div>
 
 
 

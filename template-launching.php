@@ -19,7 +19,9 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
           <h1><?php	echo $post_meta_title	?></h1>
-			      <?php get_template_part('template-parts/content', 'countdown') ?>
+					<div class="countdown-container">
+						<?php get_template_part('template-parts/content', 'countdown') ?>						
+					</div>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
             <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
