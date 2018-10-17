@@ -4,6 +4,8 @@
 */
 
 get_header();
+
+$page_id = get_the_ID();
 ?>
 
 	<div id="primary" class="content-area">
@@ -14,10 +16,9 @@ get_header();
       <div class="" id="main-front">
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
-          <h1>WE ARE LAUNCHING IN</h1>
+          <h1><?php	echo get_post_meta($page_id, 'title', true);	?></h1>
           <div>
-            <h2>5</h2>
-            <h2>DAYS</h2>
+						<?php get_template_part('template-parts/content', 'countdown') ?>
           </div>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
