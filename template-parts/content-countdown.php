@@ -11,14 +11,59 @@ $interval = $deadline->diff($now);
 
 $remainingDays =  $interval->format('%d');
 
-if ($remainingDays < 0) {
-  $countdown = "";
-} elseif ($remainingDays < 1) {
-  $countdown = $interval->format('%h heures et %i minutes');
-} elseif ($remainingDays < 2) {
-  $countdown = $interval->format('%d jour %h heures et %i minutes');
-} else {
-  $countdown = $interval->format('%d jours %h heures et %i minutes');
-};
+$days    = $interval->format('%d');
+$hours   = $interval->format('%H');
+$minutes = $interval->format('%i');
+$seconds = $interval->format('%s');
 
-echo '<h2>'.$countdown.' avant la sortie</h2>';
+$display_days    = ($days<2)     ? "Day"   : "Days";
+$display_hours   = ($hours<2)    ? "Hour"  : "Hours";
+$display_minutes = ($minutes<2)  ? "Minute": "Minutes";
+$display_seconds = ($seconds<2)  ? "Second": "Seconds";
+?>
+
+<div class="countdown-container">
+  <?php if ($days > 0): ?>
+  <div class="item">
+    <p><?= $days ?></p>
+    <p><?= $display_days ?></p>
+  </div>
+  <?php endif ?>
+  <?php if ($hours > 0): ?>
+  <div class="item">
+    <p><?= $hours ?></p>
+    <p><?= $display_hours ?></p>
+  </div>
+  <?php endif ?>
+  <?php if ($minutes > 0): ?>
+  <div class="item">
+    <p><?= $minutes ?></p>
+    <p><?= $display_minutes ?></p>
+  </div>
+  <?php endif ?>
+  <?php if ($seconds > 0): ?>
+  <div class="item">
+    <p><?= $seconds ?></p>
+    <p><?= $display_seconds ?></p>
+  </div>
+  <?php endif ?>
+</div>
+
+
+
+
+
+
+
+<?php
+// if ($remainingDays < 0) {
+//   $countdown = "";
+// } elseif ($remainingDays < 1) {
+//   $countdown = $interval->format('%h heures et %i minutes');
+// } elseif ($remainingDays < 2) {
+//   $countdown = $interval->format('%d jour %h heures et %i minutes');
+// } else {
+//   $countdown = $interval->format('%d jours %h heures et %i minutes');
+// };
+//
+// echo '<h2>'.$countdown.' avant la sortie</h2>';

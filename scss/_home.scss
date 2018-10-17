@@ -24,5 +24,12 @@ div#main-front {
     div {
       text-align: center;
     }
+    div.countdown-container {
+      display: flex;
+      flex-direction: row;
+      div.item {
+        padding: 2em;
+      }
+    }
   }
 }

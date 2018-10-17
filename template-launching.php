@@ -17,9 +17,7 @@ $page_id = get_the_ID();
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
           <h1><?php	echo get_post_meta($page_id, 'title', true);	?></h1>
-          <p>
-			  <?php get_template_part('template-parts/content', 'countdown') ?>
-          </p>
+			      <?php get_template_part('template-parts/content', 'countdown') ?>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
             <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
