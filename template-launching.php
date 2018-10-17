@@ -6,6 +6,8 @@
 get_header();
 
 $page_id = get_the_ID();
+$post_meta_title = get_post_meta($page_id, 'title', true);
+$post_meta_date = get_post_meta($page_id, 'date', true);
 ?>
 
 	<div id="primary" class="content-area">
@@ -16,7 +18,7 @@ $page_id = get_the_ID();
       <div class="" id="main-front">
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
         <div class="front-content">
-          <h1><?php	echo get_post_meta($page_id, 'title', true);	?></h1>
+          <h1><?php	echo $post_meta_title	?></h1>
 			      <?php get_template_part('template-parts/content', 'countdown') ?>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
@@ -70,7 +72,9 @@ $page_id = get_the_ID();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<script type="text/javascript">
+	   var post_meta_date = "<?php echo $post_meta_date; ?>";
+	</script>
 
 <?php
 get_footer();
