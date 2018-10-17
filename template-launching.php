@@ -27,11 +27,11 @@ $page_id = get_the_ID();
           <div class="bttn">
               <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Launch demo modal
+              Newsletter
             </button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
-              Launch demo modal
-            </button>
+            <a class="btn btn-primary">
+              About Us
+            </a>
 
 
             <!-- Modal -->
@@ -44,32 +44,19 @@ $page_id = get_the_ID();
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
-                    Yop
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    YEP
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
+									<form action="" method="post">
+                    <div class="modal-body">
+        				  		<p>
+            		  			<label for="zero_newsletter_email">Votre email:</label>
+            		  			<input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
+        				  		</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Send Email</button>
+											<!-- <input class="btn btn-primary" type="submit" name="" value="Send Email"> -->
+                    </div>
+								  </form>
                 </div>
               </div>
             </div>
