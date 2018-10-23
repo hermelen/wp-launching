@@ -1,25 +1,29 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.modal-body.message').hide();
-    $('#news_form').submit(function(event){
+    $('#news_form').submit(function(event) {
         event.preventDefault();
         var email = $('#zero_newsletter_email').val();
         $.ajax({
-            url : url,
-            method : 'POST',
-            data : { 'zero_newsletter_email' : email},
-        }).done( emailSent() );
+            url: url,
+            method: 'POST',
+            data: {
+                'zero_newsletter_email': email
+            },
+        }).done(function() {
+            emailSent();
+            setTimeout(function() {
+                $('#news_form')[0].reset();
+                $('#exampleModal').modal('hide');
+                $('.modal-body.form').show();
+                $('.modal-footer').show();
+                $('.modal-body.message').hide();
+            }, 1000);
+        });
     })
 
-    function emailSent(){
-      $('.modal-body.form').hide();
-      $('.modal-footer').hide();
-      $('.modal-body.message').show();
-      // $('#news_form')[0].reset();
-      // $('.modal-body.form').delay(1000).show();
-      // $('.modal-footer').delay(1000).show();
-      // $('.modal-body.message').delay(1000).hide();
-    }
-
-    function resetForm(){
+    function emailSent() {
+        $('.modal-body.form').hide();
+        $('.modal-footer').hide();
+        $('.modal-body.message').show();
     }
 });
