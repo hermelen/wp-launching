@@ -132,7 +132,7 @@ function wp_launching_scripts() {
 
   wp_deregister_script('jquery');//pour désactiver le jquery installé avec wordpress(uniquement pour le front)
 
-  wp_enqueue_script('jquery',"https://code.jquery.com/jquery-3.3.1.slim.min.js");
+  wp_enqueue_script('jquery',"https://code.jquery.com/jquery-3.3.1.min.js");
 
   wp_enqueue_script('popper',"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js");
 
@@ -143,6 +143,8 @@ function wp_launching_scripts() {
 	wp_enqueue_script( 'wp-launching-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '20151215', true );
+
+    wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -20,7 +20,7 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
         <div class="front-content">
           <h1><?php	echo $post_meta_title	?></h1>
 					<div class="countdown-container">
-						<?php get_template_part('template-parts/content', 'countdown') ?>						
+						<?php get_template_part('template-parts/content', 'countdown') ?>
 					</div>
           <div>
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
@@ -46,7 +46,7 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-				  <form action="" method="post">
+				  <form id="news_form" action="" method="post">
                     <div class="modal-body">
         			  <p>
             		    <label for="zero_newsletter_email">Votre email:</label>

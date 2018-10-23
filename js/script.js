@@ -78,10 +78,10 @@ $(document).ready(function(){
       </div>
     `)
 
-    console.log(days);
-    console.log(hours);
-    console.log(minutes);
-    console.log(seconds);
+    // console.log(days);
+    // console.log(hours);
+    // console.log(minutes);
+    // console.log(seconds);
   }, 1000);
   countdown();
 });
