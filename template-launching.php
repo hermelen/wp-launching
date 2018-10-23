@@ -47,6 +47,7 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
                     </button>
                   </div>
 				  <form id="news_form" action="" method="post">
+						<div class="g-recaptcha" data-sitekey="6Leyd3YUAAAAAHUwTc_H9B9FTj3XsW3VkZCKMYn1"></div>
                     <div class="modal-body form">
         			          <p>
             		            <label for="zero_newsletter_email">Votre email:</label>
