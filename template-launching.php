@@ -47,16 +47,18 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
                     </button>
                   </div>
 				  <form id="news_form" action="" method="post">
-                    <div class="modal-body">
-        			  <p>
-            		    <label for="zero_newsletter_email">Votre email:</label>
-            		    <input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
-        			  </p>
+                    <div class="modal-body form">
+        			          <p>
+            		            <label for="zero_newsletter_email">Votre email:</label>
+            		            <input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
+        			          </p>
+                    </div>
+										<div class="modal-body message">
+        			          <p>Votre email a bien été enregistré !</p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <button type="submit" class="btn btn-primary">Send Email</button>
-											<!-- <input class="btn btn-primary" type="submit" name="" value="Send Email"> -->
                     </div>
     			  </form>
                 </div>
@@ -71,10 +73,12 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
       </div>
       <!-- main-front -->
 
-
+			<?php
+			$url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	<script type="text/javascript">
+	   var url = "<?php echo $url; ?>";
 	   var post_meta_date = "<?php echo $post_meta_date; ?>";
 	</script>
 
