@@ -1,3 +1,10 @@
+var onloadCallback = function() {
+  var submitNewsletter = document.getElementById('submit_newletter');
+  submitNewsletter.disabled = false;
+  alert("grecaptcha is ready!");
+
+};
+
 $(document).ready(function(){
   setInterval(function countdown() {
     var splitted = post_meta_date.split(" ");
@@ -77,11 +84,6 @@ $(document).ready(function(){
         </div>
       </div>
     `)
-
-    // console.log(days);
-    // console.log(hours);
-    // console.log(minutes);
-    // console.log(seconds);
   }, 1000);
   countdown();
 });

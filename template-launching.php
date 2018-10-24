@@ -9,11 +9,10 @@ $page_id = get_the_ID();
 $post_meta_title = get_post_meta($page_id, 'title', true);
 $post_meta_date = get_post_meta($page_id, 'date', true);
 ?>
-
+<script type="text/javascript">// reCaptcha setting
+</script>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-
 
       <div class="" id="main-front">
         <img src="<?php echo wp_upload_dir()['baseurl'].'/2018/10/6903094-winter-scenery.jpg' ?>" alt="">
@@ -26,14 +25,9 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
             <p>Codi- High quality Bootstrap HTML5Coming Soon Landing Page Template</p>
             <p>Comes with fully responsive layout, Cool features, and Clean design.</p>
           </div>
-          <div class="bttn">
-              <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Newsletter
-            </button>
-            <a class="btn btn-outline-light">
-              About Us
-            </a>
+          <div class="bttn"><!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Newsletter</button>
+            <a class="btn btn-outline-light">About Us</a>
 
 
             <!-- Modal -->
@@ -46,38 +40,35 @@ $post_meta_date = get_post_meta($page_id, 'date', true);
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-				  <form id="news_form" action="" method="post">
-						<div class="g-recaptcha" data-sitekey="6Leyd3YUAAAAAHUwTc_H9B9FTj3XsW3VkZCKMYn1"></div>
+				          <form id="news_form" action="" method="post">
+						        <div class="g-recaptcha" data-sitekey="6Leyd3YUAAAAAHUwTc_H9B9FTj3XsW3VkZCKMYn1" data-callback="onloadCallback"><!-- reCaptcha setting -->
+						        </div>
                     <div class="modal-body form">
-        			          <p>
-            		            <label for="zero_newsletter_email">Votre email:</label>
-            		            <input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
-        			          </p>
+        		      	  <p>
+                        <label for="zero_newsletter_email">Votre email:</label>
+                        <input id="zero_newsletter_email" name="zero_newsletter_email" type="email"/>
+        		      	  </p>
                     </div>
-										<div class="modal-body message">
-        			          <p>Votre email a bien été enregistré !</p>
+						        <div class="modal-body message">
+        		      	  <p>Votre email a bien été enregistré !</p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Send Email</button>
+                      <button type="submit" class="btn btn-primary" id="submit_newletter" disabled="disabled">Send Email</button>
                     </div>
-    			  </form>
+    			        </form>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Button trigger modal -->
+          </div><!-- Button trigger modal -->
           <p>Template Handcrafted By Codi'n Camp</p>
-
-        </div>
-        <!-- front-content -->
-      </div>
-      <!-- main-front -->
-
+        </div><!-- front-content -->
+      </div><!-- main-front -->
 			<?php
 			$url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	<!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script> -->
 	<script type="text/javascript">
 	   var url = "<?php echo $url; ?>";
 	   var post_meta_date = "<?php echo $post_meta_date; ?>";

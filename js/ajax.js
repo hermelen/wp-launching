@@ -6,20 +6,27 @@ $(document).ready(function(){
         $.ajax({
             url : url,
             method : 'POST',
-            data : { 'zero_newsletter_email' : email},
-        }).done( emailSent() );
+            data : {
+              'zero_newsletter_email' : email,
+              'g-recaptcha-response': grecaptcha.getResponse()
+            },
+        }).done( function(){
+          console.log(grecaptcha.getResponse());
+          emailSent();
+          setTimeout(function(){
+            $('#news_form')[0].reset();
+            $('.modal-body.form').show();
+            $('.modal-footer').show();
+            $('.modal-body.message').hide();
+            $('#exampleModal').modal('hide');
+            grecaptcha.reset();
+          }, 2000);
+        });
     })
 
     function emailSent(){
       $('.modal-body.form').hide();
       $('.modal-footer').hide();
       $('.modal-body.message').show();
-      // $('#news_form')[0].reset();
-      // $('.modal-body.form').delay(1000).show();
-      // $('.modal-footer').delay(1000).show();
-      // $('.modal-body.message').delay(1000).hide();
-    }
-
-    function resetForm(){
     }
 });
