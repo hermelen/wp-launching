@@ -1,6 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.modal-body.message').hide();
-    $('#news_form').submit(function(event){
+    $('#news_form').submit(function(event) {
         event.preventDefault();
         var email = $('#zero_newsletter_email').val();
         $.ajax({
